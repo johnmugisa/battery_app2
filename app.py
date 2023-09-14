@@ -1,5 +1,6 @@
 import dash
-from dash import dcc, html, Output, Input, State
+from dash import dcc, Output, Input, State
+import dash_html_components as html
 import dash_bootstrap_components as dbc
 import base64
 import io
@@ -30,20 +31,19 @@ app.layout = html.Div([
         },
         multiple=False
     ),
-    html.Div([
-        html.Div(id='output-data-upload'),
-        html.Div(
-            dcc.Graph(id='plot-display', style={'height': '80vh'}),
-            style={
-            'display': 'flex',
-            'justifyContent': 'center',
-            'alignItems': 'center',
-            'height': '80vh'
-        }
+    html.Div(id='output-data-upload'),
+    html.Div(
+        dcc.Graph(id='plot-display', style={'height': '80vh'}),
+        style={
+        'display': 'flex',
+        'justifyContent': 'center',
+        'alignItems': 'center',
+        'height': '80vh'
+    }
     ),
     html.Button('Save Plot', id='save-plot-button'),
     html.Div(id='save-output')
-], style={'textAlign': 'center'}) ])
+], style={'textAlign': 'center'})
 
 @app.callback(
     Output('output-data-upload', 'children'),
@@ -162,9 +162,6 @@ def update_output(contents, filename):
                 paper_bgcolor="white",
                 showlegend=True
             )
-
-            return f'File "{filename}" processed and plotted.', fig
-
 
             return f'File "{filename}" processed and plotted.', fig
 
