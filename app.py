@@ -1,5 +1,6 @@
 import dash
-from dash import dcc, html, Output, Input, State
+from dash import dcc, html
+from dash.dependencies import Input, Output, State
 import dash_bootstrap_components as dbc
 import base64
 import io
@@ -8,6 +9,7 @@ import numpy as np
 import plotly.graph_objects as go
 import os
 import plotly.io as pio
+
 
 # Initialize the Dash app
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
@@ -188,4 +190,5 @@ def save_plot(n_clicks, current_figure):
         return html.Div(f'Plot saved as {path}')
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=False, port=os.environ.get('PORT', 8050))
+
