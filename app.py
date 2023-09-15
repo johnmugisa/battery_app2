@@ -1,6 +1,5 @@
 import dash
-from dash import dcc, Output, Input, State
-import dash_html_components as html
+from dash import dcc, html, Output, Input, State
 import dash_bootstrap_components as dbc
 import base64
 import io
