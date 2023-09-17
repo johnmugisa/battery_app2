@@ -189,6 +189,8 @@ def save_plot(n_clicks, current_figure):
         
         return html.Div(f'Plot saved as {path}')
 
-if __name__ == '__main__':
-    app.run_server(debug=False, port=os.environ.get('PORT', 8050))
+# if __name__ == '__main__':
+#     app.run_server(debug=False, port=os.environ.get('PORT', 8050))
 
+if __name__ == '__main__':
+    app.run_server(debug=True)
