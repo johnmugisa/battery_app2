@@ -1,0 +1,20 @@
+{
+    "@context": [
+        "https://w3id.org/emmo/domain/battery/context",
+        {
+          "dc": "http://purl.org/dc/terms/"
+        }
+    ],
+    "@type": "dcat:Dataset",
+    "csvw:dialect": {
+        "@type": "csvw:Dialect",
+        "csvw:skipRows": 2,
+        "csvw:delimiter": "\t"
+    },
+    "csvw:url": "https://raw.githubusercontent.com/BattGenie/battetl/main/tests/data/maccor_cycler_data/simple_data/BG_Maccor_Testdata%20-%20079.txt",
+    "csvw:tableSchema": "https://raw.githubusercontent.com/emmo-repo/domain-electrochemistry/master/docs/assets/jsonld/csvw_table_schema_maccor_2.json",
+
+    "dc:title": "BG_Maccor_Testdata - 079",
+    "dc:description": "A TXT file containing constant current constant voltage (CCCV) test data from an Maccor cycler"
+  }
+  

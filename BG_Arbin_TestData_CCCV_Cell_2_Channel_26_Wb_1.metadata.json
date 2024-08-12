@@ -1,0 +1,16 @@
+{
+    "@context": [
+        "https://w3id.org/emmo/domain/battery/context",
+        {
+          "dc": "http://purl.org/dc/terms/"
+        }
+    ],
+    "@type": "dcat:Dataset",
+    "csvw:url": "https://raw.githubusercontent.com/BattGenie/battetl/main/tests/data/arbin_cycler_data/cccv_data_files/BG_Arbin_TestData_CCCV_Cell_2_Channel_26_Wb_1.CSV",
+    "csvw:tableSchema": "https://raw.githubusercontent.com/emmo-repo/domain-electrochemistry/master/docs/assets/jsonld/csvw_table_schema_battery_archive.json",
+
+    "dc:identifier": "https://doi.org/10.1234/arbin.cccv.cell2.26",
+    "dc:title": "BG Arbin CCCV Test Data - Cell 2 Channel 26",
+    "dc:description": "A CSV file containing constant current constant voltage (CCCV) test data from an Arbin cycler"
+  }
+  
